@@ -84,8 +84,6 @@ const ButtonTable = () => {
  * if you're disciplined!
  */
 const Table = styled.table`
-  font-family: sans-serif;
-
   th,
   td {
     text-align: center;
