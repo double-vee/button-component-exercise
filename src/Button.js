@@ -46,22 +46,44 @@ const BaseButton = styled.button`
   font-weight: 500;
   letter-spacing: var(--letterSpacing);
   text-transform: uppercase;
+
+  &:focus {
+    outline: 2px solid ${COLORS.primary};
+    outline-offset: 3px;
+  }
 `;
 
 const FillButton = styled(BaseButton)`
   background-color: ${COLORS.primary};
   color: ${COLORS.white};
+
+  &:hover {
+    background-color: ${COLORS.primaryLight};
+  }
 `;
 
 const OutlineButton = styled(BaseButton)`
   border: 2px solid currentColor;
   background-color: ${COLORS.white};
   color: ${COLORS.primary};
+
+  &:hover {
+    background-color: ${COLORS.offwhite};
+  }
 `;
 
 const GhostButton = styled(BaseButton)`
   background-color: transparent;
   color: ${COLORS.gray};
+
+  &:hover {
+    background-color: ${COLORS.transparentGray15};
+    color: ${COLORS.black};
+  }
+
+  &:focus {
+    outline-color: ${COLORS.transparentGray75};
+  }
 `;
 
 export default Button;
